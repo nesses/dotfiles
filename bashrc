@@ -16,7 +16,7 @@ fi
 
 google() {
 	str=`echo $1 | sed 's/ /+/g'`;
-	w3m "http://www.google.com/search?q=$str";
+	w3m "http://www.duckduckgo.com/lite/?q=$str";
 }
 ddstat() {
 	sudo kill -USR1 "$(pidof dd)"
