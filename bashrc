@@ -79,3 +79,7 @@ alias mouseon='synclient touchpadoff=0'
 alias tputls='for C in {0..255};do tput setab $C;echo -n "$C ";done;tput sgr0;echo'
 alias vibash='vim ~/.bashrc'
 
+
+
+
+
