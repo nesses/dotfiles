@@ -1,0 +1,65 @@
+#!/bin/bash
+SESSION="//DASH"
+DATE=`date "+%Y-%m-%d"`
+
+if [ -z "`tmux ls | grep '//DASH'`" ];
+then
+	tmux -2 new-session -d -s $SESSION;
+	tmux rename-window -t 0 'logs';
+
+	tmux split-window -v;
+	tmux split-window -h;
+	tmux select-pane -t $SESSION.0;
+	tmux split-window -h;
+
+	tmux select-pane -t $SESSION.0
+	tmux send-keys "clear; tail -f /var/log/bronko/bash-history-$DATE.log" C-m;
+
+	tmux select-pane -t $SESSION.1;
+	tmux send-keys "clear; sudo tail -f /var/log/auth.log" C-m;
+
+	tmux select-pane -t $SESSION.2;
+	tmux send-keys "clear; sudo tail -f /var/log/kern.log" C-m;
+
+	tmux select-pane -t $SESSION.3;
+	tmux send-keys "clear; sudo tail -f /var/log/emerge.log" C-m;
+
+	tmux new-window -t $SESSION;
+	tmux rename-window -t 1 'sys';
+
+	tmux split-window -h;
+	tmux split-window -v;
+
+	tmux select-pane -t $SESSION.0;
+	tmux send-keys "htop" C-m;
+
+	tmux select-pane -t $SESSION.1;
+	tmux send-keys "mc" C-m;
+
+	tmux select-pane -t $SESSION.2;
+	tmux send-keys "sudo iftop -B -P -i wlp2s0" C-m;
+
+	tmux new-window -t $SESSION;
+	tmux rename-window -t 2 'media';
+
+	tmux split-window -v;
+	tmux resize-pane -U 20;
+	tmux split-window -h;
+	tmux resize-pane -R 40;
+	tmux select-pane -t $SESSION.0;
+
+	tmux send-keys "clear;echo 'You may wanna play something in this shell for eg. with mplayer'" C-m;
+	tmux select-pane -t $SESSION.1;
+	tmux send-keys "vis" C-m;
+	tmux select-pane -t $SESSION.2;
+	tmux send-keys "alsamixer -Dhw" C-m;
+
+	tmux split-window -v;
+	tmux send-keys "pulsemixer" C-m;
+
+	tmux select-window -t $SESSION:sys;
+
+	tmux -2 attach-session -t $SESSION;
+fi
+
+tmux a -t $SESSION

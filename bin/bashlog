@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+if [ "$1" == "a" ]; then
+    #APPEND
+	FILTER="exit;tmux;tmux a;alsamixer;alsamixer -Dhw;ls;cd"
+
+    COMMAND="$(history 1 | awk '{print substr($0, index($0,$2)) }' )"
+	echo "$COMMAND"
+    FILTER=`echo "$FILTER" | sed 's/;/\n/g'`
+    while read -r i;
+    do
+        [ "$COMMAND" == "$i" ] || [ "$COMMAND" == "$i " ] && return;
+    done <<< $FILTER
+    echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $COMMAND" >> /var/log/bronko/bash-history-
+
+elif [ "$1" == "s" ];then
+	#search
+	FILES="/var/log/bronko/*.log"
+	for f in $FILES
+	do
+		cat $f | grep $2 
+	done
+fi
+
