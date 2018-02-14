@@ -1,3 +1,14 @@
-Here you can download my dotfiles
+Nesses's dotfiles
+=============
 
- - DESCRIPTION AND TEXT WILL FOLLOW -
+ - bashrc
+ - bspwmrc
+ - sxhkdrc
+ - vimrc
+ - muttrc
+ - pypanelrc
+ - vimrc
+ - tmux.conf
+ - htoprc
+ - mc
+ - scripts(bin/)
