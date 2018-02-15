@@ -1,10 +1,6 @@
 #!/bin/bash
 
-DOTFILES=~/dotfiles
+DOTDIR=~/dotfiles/
+SPATH=$1
 
-COMMAND=$1
-
-if [ "$COMMAND" == "add" ];
-then
-		SPATH=$2;
-fi
+mv -v "$1" "$DOTDIR"

@@ -17,7 +17,7 @@ fi
 ########## COLORS ###########
 GREEN="$(tput setaf 2)"
 RESET="$(tput sgr0)"
-
+BOLD="$(tput bold)"
 
 google() {
 	str=`echo $1 | sed 's/ /+/g'`;
@@ -59,7 +59,7 @@ export HISTCONTROL=ignoreboth
 export PROMPT_COMMAND='logger'
 
 #export PS1="$GREEN[ \w ]----[ \t ]----[ \u@\h ]--[ $(awk '/MemFree/{print $2}' /proc/meminfo ) ]\n> $RESET"
-export PS1='$GREEN[ \w ]----[ \t ]----[ \u@\h ]--[ L:$LINES C:$COLUMNS ]\n> $RESET'
+export PS1='$GREEN$BOLD[ \w ]----[ \t ]----[ \u@\h ]--[ L:$LINES C:$COLUMNS ]\n> $RESET'
 
 [ -n "$WINDOWID" ] && [ -n "`pgrep -x xcompmgr`" ] && transset --id "$WINDOWID" 0.8 > /dev/null
 
