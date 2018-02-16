@@ -1,0 +1,9 @@
+#!/bin/bash
+
+URL=$1
+FILE=$2
+if [ ! -f $FILE ]; then
+	mplayer -dumpstream $URL -dumpfile $FILE
+else
+	echo "File: $FILE - does already exists!!!"
+fi
