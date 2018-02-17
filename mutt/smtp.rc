@@ -1,0 +1,13 @@
+set smtp_url=smtps://matthias.grotjohann@gmail.com@smtp.gmail.com:465/
+set realname = "Matthias Grotjohann"
+set from = "matthias.grotjohann@gmail.com"
+set signature = "~/.mutt/signatur"
+
+set hidden_host=yes
+set send_charset="utf-8"
+# there is a small chance to communicate with a windoofs machine
+set assumed_charset="iso-8859-1"
+
+# make sure Vim knows Mutt is a mail client and that a UTF-8 encoded message will be composed
+set editor="vim -c 'set syntax=mail ft=mail enc=utf-8'"
+

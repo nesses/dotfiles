@@ -1,0 +1,10 @@
+set mail_check=60
+set mbox_type   = Maildir
+
+set folder      = ~/mail
+set spoolfile   = "+INBOX"
+set mbox        = "+[Google Mail]/Alle Nachrichten"
+set postponed   = "+[Google Mail]/Entwürfe"
+unset record
+mailboxes ! + `for file in ~/mail/*; do box=$(basename "$file"); if [ "${box}" != "." -a "${box}" != ".." -a "${box}" != ".customflags" -a "${box}" != ".subscriptions" -a "${box}" != "Archive" -a "${box}" != "Searches" ];then echo -n "\"+${box}\" "; fi; done`
+

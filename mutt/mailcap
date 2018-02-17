@@ -1,0 +1,5 @@
+text/html; w3m  %s; nametemplate=%s.html; copiousoutput
+text/htm; w3m %s; nametemplate=%s.htm; copiousoutput
+message/html; w3m %s; nametemplate=%s.html; copiousoutput
+image/png; feh %s ; nametemplate=%s.png; copiousoutput
+image/jpeg; feh %s ; nametemplate=%s.jpg; copiousoutput

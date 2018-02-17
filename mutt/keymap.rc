@@ -1,0 +1,13 @@
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+
+bind index CP sidebar-prev
+bind index CN sidebar-next
+bind index CO sidebar-open
+bind pager CP sidebar-prev
+bind pager CN sidebar-next
+bind pager CO sidebar-open
+
+#because we're on GMAIL we need to move messages to Trasg before we can del them
+macro index,pager X "<save-message>=[Google<quote-char> Mail].Papierkorb<enter><enter>" "Papierkorb"
+

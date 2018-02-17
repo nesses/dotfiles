@@ -1,0 +1,16 @@
+set sidebar_visible = no
+set sidebar_width = 20
+set sidebar_folder_indent = yes
+set sidebar_short_path = yes
+
+set sort= threads
+set sort_aux = reverse-last-date-received
+# just scroll one line instead of full page
+set menu_scroll
+
+set edit_headers = yes
+set autoedit = yes
+
+# make sure Vim knows Mutt is a mail client and that a UTF-8 encoded message will be composed
+set editor="vim -c 'set syntax=mail ft=mail enc=utf-8'"
+
