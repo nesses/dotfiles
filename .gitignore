@@ -2,6 +2,9 @@ config/pulse/
 config/vis/vis.log
 config/dconf
 config/gtk-2.0/
+config/opera/
+config/ranger/
+config/opera-beta/
 mutt/password.rc
 mutt/signatur
 mutt/cache/
