@@ -1,13 +1,14 @@
 #! /bin/sh
+urxvtd &
 xscreensaver -no-splash &
 setxkbmap de &
 sxhkd &
 xcompmgr &
-xterm -title "//DASH" -e '/home/bronko/bin/muxdash' &
+urxvt -title "//DASH" -e '/home/bronko/bin/muxdash' &
 pypanel &
-(sleep 5; dhcpcd-gtk) &
-
-#xrandr --output VGA-0 --left-of LVDS --mode 1360x768 
+(sleep 3; dhcpcd-gtk & /home/bronko/.local/bin/moc-tray & pasystray) &
+#EXPERIMENTAL
+(sleep 3; /home/bronko/.local/bin/menutray) &
 
 bspc monitor VGA-0  -d //1 //2 //3 //4 //5 
 bspc monitor LVDS   -d //6 //7 //8 //9 //0

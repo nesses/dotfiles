@@ -19,7 +19,7 @@ elif [ "$1" == "s" ];then
 	FILES="/var/log/bronko/*.log"
 	for f in $FILES
 	do
-		cat $f | grep $2 
+		cat $f | grep -i "$2" 
 	done
 fi
 

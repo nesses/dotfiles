@@ -52,7 +52,7 @@ TRAY_I_WIDTH    = 24            # System tray icon width  (usually 16 or 24)
 #------------------------------------------------------------------------------
 # Panel Clock Format: 'man strftime' for detailed formatting options and help
 #------------------------------------------------------------------------------
-CLOCK_FORMAT    = "%d.%m.%Y %H:%M"    # Ex: 2004-09-25 17:45 
+CLOCK_FORMAT    = "%a %d.%m.%Y %H:%M"    # Ex: 2004-09-25 17:45 
 
 #------------------------------------------------------------------------------
 # Clock Delay: Seconds between each clock update during periods of inactivity
@@ -154,9 +154,9 @@ DESKTOP_NAMES   = []
 #------------------------------------------------------------------------------
 DESKTOP         = 1             # Desktop name section
 TASKS           = 2             # Task names section 
-TRAY            = 3             # System tray section
-CLOCK           = 4             # Clock section
-LAUNCHER        = 5             # Application launcher section
+TRAY            = 4             # System tray section
+CLOCK           = 5             # Clock section
+LAUNCHER        = 3             # Application launcher section
 
 #------------------------------------------------------------------------------
 #                       Button Event Function Definitions
