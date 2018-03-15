@@ -1,14 +1,31 @@
+Xcursor.theme: gentoo
+Xcursor.size:  16
+
+!***
+
 xterm*foreground:	green
 xterm*background:	black
 xterm*faceName:		Droid Sans Mono Nerd Font Mono:style=Regular
 xterm*faceSize:		9
 xterm*renderFont:	True
 
-!FUCKING xscreensaver STUFF -.-
+!***
 
+yeahconsole*term: urxvt
+yeahconsole*restart: 0
+yeahconsole*screenWidth: 1100
+!height is in lines not pixel
+yeahconsole*consoleHeight: 35
+yeahconsole*xOffset: 1499
+yeahconsole*aniDelay: 5
+yeahconsole*handleColor: #1F80F3
+yeahconsole*toggleKey: None+Menu
+
+!***
+!xscreensaver
 xscreensaver.splash: false
-
 xscreensaver.Dialog.width: 400
+
 !font settings
 xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
 xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*

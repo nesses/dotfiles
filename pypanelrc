@@ -13,11 +13,11 @@ VERSION         = 2.4           # Config file version
 #------------------------------------------------------------------------------
 BG_COLOR        = "0x222211"    # Panel background and tinting color
 TASK_COLOR      = "0x000000"    # Normal task name color 
-FOCUSED_COLOR   = "0x00ff00"    # Focused task name color
+FOCUSED_COLOR   = "0x0099FF"    # Focused task name color
 SHADED_COLOR    = "0x808080"    # Shaded task name color 
 MINIMIZED_COLOR = "0x808080"    # Minimized task name color 
-DESKTOP_COLOR   = "0x00ff00"    # Desktop name color
-CLOCK_COLOR     = "0x00ff00"    # Clock text color
+DESKTOP_COLOR   = "0x0099ff"    # Desktop name color
+CLOCK_COLOR     = "0x0099ff"    # Clock text color
 LINE_COLOR      = "0x606060"    # Vertical line color
 
 # Text Shadow Colors
@@ -116,14 +116,17 @@ ICON_LIST       = {
 #     ("<executable>", "<full path to icon>")
 #------------------------------------------------------------------------------
 LAUNCH_LIST     = [
-                   ("firefox-bin", "/opt/firefox/browser/icons/mozicon128.png"), 
+                   ("opera-beta", "/usr/share/pixmaps/opera-beta.xpm"),
+				   ("urxvt", "/home/bronko/.local/share/icons/hicolor/32x32/apps/term.png"), 
+				   ("vimb wa", "/home/bronko/.local/share/icons/hicolor/256x256/apps/whatsapp-icon.png"), 
+				   
                   ]
 
 #------------------------------------------------------------------------------
 # Background Alpha/Shade Level: 0 (Fully Translucent) -> 255 (Fully Opaque)
 # BG_COLOR is used for tinting
 #------------------------------------------------------------------------------
-SHADE           = 255
+SHADE           = 200
 
 #------------------------------------------------------------------------------
 # Misc. Options: 1 = Enabled/Yes, 0 = Disabled/No

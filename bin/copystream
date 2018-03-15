@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PID=`pgrep -x firefox`
+DIR="/proc/$PID/fd"
+
+FILE="`ls -al $DIR/* | grep deleted | cut -d ' ' -f 9`"
+
+while [ -f $FILE ]; do
+	echo "hallo";
+	sleep 60;	
+done
+
+

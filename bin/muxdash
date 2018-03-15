@@ -34,7 +34,7 @@ then
 	tmux send-keys "htop" C-m;
 
 	tmux select-pane -t $SESSION.1;
-	tmux send-keys "mc" C-m;
+	tmux send-keys "ranger" C-m;
 
 	tmux select-pane -t $SESSION.2;
 	tmux send-keys "sudo iftop -B -P -i wlp2s0" C-m;
@@ -48,14 +48,14 @@ then
 	tmux resize-pane -R 40;
 	tmux select-pane -t $SESSION.0;
 
-	tmux send-keys "clear;echo 'You may wanna play something in this shell for eg. with mplayer'" C-m;
+	tmux send-keys "clear" C-m;
 	tmux select-pane -t $SESSION.1;
-	tmux send-keys "vis" C-m;
+	tmux send-keys "mocp" C-m;
 	tmux select-pane -t $SESSION.2;
-	tmux send-keys "alsamixer -Dhw" C-m;
+	tmux send-keys "vis" C-m;
 
-	tmux split-window -v;
-	tmux send-keys "pulsemixer" C-m;
+	#tmux split-window -v;
+	#tmux send-keys "pulsemixer" C-m;
 
 	tmux select-window -t $SESSION:sys;
 

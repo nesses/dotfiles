@@ -1,0 +1,6 @@
+#!/bin/bash
+URL=`echo | dmenu | xargs`
+
+if [ -n "$URL" ]; then
+	vimb "$URL"
+fi

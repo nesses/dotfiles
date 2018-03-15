@@ -9,4 +9,9 @@ if [ "$TYPE" == "bash"  ] && [ ! -f $FILE ];
 then
 	echo '#!/bin/bash' > $FILE;
 	chmod +x $FILE
+elif [ "$TYPE" == "perl"  ] && [ ! -f $FILE ];
+then
+	echo -e "#!/usr/bin/perl\n" > $FILE;
+	chmod +x $FILE
+ 
 fi

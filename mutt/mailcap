@@ -1,5 +1,11 @@
-text/html; w3m  %s; nametemplate=%s.html; copiousoutput
-text/htm; w3m %s; nametemplate=%s.htm; copiousoutput
-message/html; w3m %s; nametemplate=%s.html; copiousoutput
-image/png; feh %s ; nametemplate=%s.png; copiousoutput
-image/jpeg; feh %s ; nametemplate=%s.jpg; copiousoutput
+#If $DISPLAY is set, use X-based counterparts
+#text/html; opera %s; test=test -n "$DISPLAY"; edit=gvim; compose=gvim; nametemplate=%s.html; copiousoutput
+#Fallback if X isn't available
+text/html; w3m -v -F -T text/html %s; edit=vim; compose=vim; nametemplate=%s.html; copiousoutput
+
+#text/html; opera '%s'; nametemplate=%s.html
+#image/png; feh %s ; nametemplate=%s.png
+#image/jpeg; feh %s ; nametemplate=%s.jpg
+application/x-xz; tar tvJf - ; copiousoutput
+application/tar+gzip; tar tvzf - ; copiousoutput
+image/*; feh '%s' ; nametemplate=%s.gif

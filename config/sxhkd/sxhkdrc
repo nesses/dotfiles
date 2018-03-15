@@ -2,13 +2,22 @@
 # wm independent hotkeys
 #
 
+# audio controlls
+XF86AudioMute
+	amixer set Master toggle 2>&1 /dev/null && (status="`amixer get Master | grep "\[o" | tail -n1 | cut -d ' ' -f 8`" ; notify-send  "Sound $status")
+
+
 # terminal emulator
 super + Return
-	urxvt
+	urxvtc
 
 # program launcher
 super + @space
 	dmenu_run
+
+# url launcher
+super + alt + @space
+	/home/bronko/bin/dmenu_url
 
 # make sxhkd reload its configuration files:
 super + Escape

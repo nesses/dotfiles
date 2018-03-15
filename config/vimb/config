@@ -1,0 +1,33 @@
+set home-page=about:blank
+set download-path=~/downloads/
+
+set editor-command=urxvt -e vim %s
+
+set plugins=true
+
+handler-add mailto=urxvt -e mutt %s
+handler-add magnet= urxvt -e rtorrent %s
+handler-add ftp=urxvt -e wget %s -P ~/downloads
+
+set webgl=true
+set hardware-acceleration-policy=always
+set default-font=Droid Sans
+set monospace-font=Droid Sans Mono
+
+set font-size=16
+set monospace-font-size=13
+
+set user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0
+
+#tabbed bindings
+set tabs-to-links=true
+nnoremap gt :sh! xdotool key --window $VIMB_XID ctrl+shift+l<CR><Esc>
+nnoremap gT :sh! xdotool key --window $VIMB_XID ctrl+shift+h<CR><Esc>
+
+#bindings
+nmap + zI #zoon++
+nmap - zO #zoon--
+nmap = zz #zoom 0
+
+shortcut-add dd=https://duckduckgo.com/lite/?q=$0
+shortcut-add wa=https://web.whatsapp.com
